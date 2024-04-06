@@ -98,7 +98,7 @@
             </a>
           </div>
           <div class="col-sm-1 mt-4" style="font-size: small;">
-            <a href="#" style="text-decoration: none;color: black;"><i class="bi bi-bag"></i> Your Cart</a>
+            <a href="#" style="text-decoration: none;color: black;" formaction="cart"><i class="bi bi-bag"></i> Your Cart</a>
           </div>
           <div class="col-sm-2 mt-2" style="font-size: medium;"></div>
         </div>

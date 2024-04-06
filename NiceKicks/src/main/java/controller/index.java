@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class index
  */
-@WebServlet({"/home"})
+@WebServlet({"/home","/login","/Signup","/admin","/cart","/changepass","/filter","/producinfo","/Sanpham",})
 public class index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
