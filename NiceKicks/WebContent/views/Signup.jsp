@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<jsp:include page="header.jsp">
+<jsp:param value="header" name="header"/>
+</jsp:include>
     <section class="mybody py-4">
         <div class="container" style=" border: 1px solid palevioletred ">
             <div class="row text-light text-center" style="height: 700px; box-shadow: 0 10px 20px 0 rgba(58, 75, 205, .33);">
@@ -18,37 +21,30 @@
             </div>
             <div class="col-4 text-center" style="border-left: 1px solid palevioletred; ">
                 <div class="header" style="height: 100px;">
-                    <h1 class="text-dark py-4">Đăng ký</h1>
+                    <h1 class="text-dark py-4">Sign Up</h1>
                     <hr class="text-dark">
-                    <form name="myForm" ng-submit="addUser()" >
+                    <form name="myForm" >
                         <div class="form-group py-3">
-                            <input type="text" name="user.name" ng-model="user.name" required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Tên đăng nhập">
+                            <input type="text" name="user.name" required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Username">
                         </div>
                         <div class="form-group py-3">
-                            <input type="email" name="user.email" ng-model="user.email" required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Email">
+                            <input type="email" name="user.email"required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group py-3">
-                            <input type="password" name="user.pass" ng-model="user.pass" required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Mật khẩu">
+                            <input type="password" name="user.pass"  required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Password">
                         </div>
                         <div class="form-group py-3">
-                            <input type="password" name="user.cfpass" ng-model="user.cfpass" required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Xác nhận mật khẩu">
+                            <input type="password" name="user.cfpass"  required style="border-radius: 5px; font-size: 20px; height: 50px;" class="form-control" placeholder="Confirm Password">
                         </div>
                     </form>
-                    <div class="text-start">
-                        <span style="color: red;"  ng-if="myForm['user.name'].$touched && myForm['user.name'].$invalid">(*) Vui lòng nhập tên</span>
-                    </div>
-                    <div class="text-start" style="color: red;" ng-if="myForm['user.email'].$touched && myForm['user.email'].$invalid " >
-                        <span style="color: red;" ng-if="myForm['user.email'].$error.required">(*) Vui lòng nhập email</span>
-                        <span style="color: red;" ng-if="myForm['user.email'].$error.email">(*) Vui lòng nhập đúng định dạng</span>
-                    </div>
                     <div class="form-check text-start text-dark py-2">
-                        <input class="form-check-input" type="checkbox">Tôi đồng ý với <a href="#"> điều khoản sử dụng.</a>
+                        <input class="form-check-input" type="checkbox">I agree with <a href="#"> terms of use.</a>
                     </div>
                     <div class="form-group text-start text-dark py-1">
-                        <p>Bạn không nhớ mật khẩu? <a href="#" style="text-decoration: none;">Quên mật khẩu?</a></p>
+						<p>Don't remember your password? <a href="#" style="text-decoration: none;">Forgot your password?</a></p>
                     </div>
                     <div class="button-login py-3">
-                        <button class="btn btn-success text-white" style="width: 350px; height: 50px; border-radius: 50px;">Đăng ký</button>
+                        <button class="btn btn-success text-white" style="width: 350px; height: 50px; border-radius: 50px;">Sign Up </button>
                     </div>
                 </div>
             </div>
@@ -57,5 +53,8 @@
         </div>
     
     </section>
+    <jsp:include page="footer.jsp">
+<jsp:param value="footer" name="footer"/>
+</jsp:include>
 </body>
 </html>

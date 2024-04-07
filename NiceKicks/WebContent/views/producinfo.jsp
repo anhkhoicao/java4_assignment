@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<jsp:include page="header.jsp">
+<jsp:param value="header" name="header"/>
+</jsp:include>
     <section class="mycontant">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9" >
-                    <div class="row" ng-repeat="sp in pro_info">
+                    <div class="row" >
                         <div class="col-md-6">
                             <img class="img-fluid" src="images/AF1.png" alt="">
                         </div>
@@ -29,18 +32,18 @@
                             <div class="btn">
                                 <div class="row">
                                     <div class="col-md-6 text-start">
-                                        <button ng-click="AddToCart(sp)" class="btn text-white" ng-click="AddToCart(sp)" style="background-color: #ffb3da; width: 300px; font-size: 14px;font-weight: bold; height: 50px;">THÊM VÀO GIỎ HÀNG</button>
+                                        <button class="btn text-white" style="background-color: #ffb3da; width: 300px; font-size: 14px;font-weight: bold; height: 50px;">ADD TO CART</button>
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="btn text-white" style="background-color: #adebad; width: 300px; font-size: 15px; height: 50px; font-weight: bold;">MUA NGAY</button>
+                                        <button class="btn text-white" style="background-color: #adebad; width: 300px; font-size: 15px; height: 50px; font-weight: bold;">BUY NOW</button>
                                     </div>
                                 </div>
-                                <button class="btn text-white py-3" style="background-color: #8080ff; height: 50px; width: 100%; font-size: 14px;font-weight: bold; margin-top: 10px;">NHẬN MÃ GIẢM GIÁ</button>
+                                <button class="btn text-white py-3" style="background-color: #8080ff; height: 50px; width: 100%; font-size: 14px;font-weight: bold; margin-top: 10px;">GET DISCOUNT CODE</button>
                             </div>
                             <hr>
                             <div class="detail">
-                                <strong>Mô tả:</strong>
-                                <p style="font-size: 15px;">Mô tả sản phẩm tại đây</p>
+                                <strong>Describe :</strong>
+                                <p style="font-size: 15px;">Product description here</p>
                             </div>
                         </div>
                     </div>
@@ -48,13 +51,12 @@
 
                 </div>
             </div>
-        </div>
     </section>
 
     <hr>
 
     <section class="produc-list">
-        <p class="text-center" style="font-size: 30px;font-weight: 700;">Có thể bạn sẽ thích</p>
+        <p class="text-center" style="font-size: 30px;font-weight: 700;">Maybe you will like it</p>
         <div class="container-fluid py-2">
             <div class="row text-center" >
                 <div class="col-lg-2 col-md-4">
@@ -68,60 +70,6 @@
                         </div>
                     </div>
                 </div>
-        <div class="container-fluid py-2">
-            <div class="row text-center" >
-                <div class="col-lg-2 col-md-4">
-                    <div class="card" > 
-                        <div class="card-body">        
-                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
-                            <div class="product">
-                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
-                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div class="container-fluid py-2">
-            <div class="row text-center" >
-                <div class="col-lg-2 col-md-4">
-                    <div class="card" > 
-                        <div class="card-body">        
-                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
-                            <div class="product">
-                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
-                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div class="container-fluid py-2">
-            <div class="row text-center" >
-                <div class="col-lg-2 col-md-4">
-                    <div class="card" > 
-                        <div class="card-body">        
-                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
-                            <div class="product">
-                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
-                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div class="container-fluid py-2">
-            <div class="row text-center" >
-                <div class="col-lg-2 col-md-4">
-                    <div class="card" > 
-                        <div class="card-body">        
-                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
-                            <div class="product">
-                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
-                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div class="container-fluid py-2">
-            <div class="row text-center" >
                 <div class="col-lg-2 col-md-4">
                     <div class="card" > 
                         <div class="card-body">        
@@ -134,28 +82,62 @@
                     </div>
                 </div>
 
-        </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="card" > 
+                        <div class="card-body">        
+                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
+                            <div class="product">
+                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
+                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <div class="card" > 
+                        <div class="card-body">        
+                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
+                            <div class="product">
+                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
+                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <div class="card" > 
+                        <div class="card-body">        
+                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
+                            <div class="product">
+                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
+                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <div class="card" > 
+                        <div class="card-body">        
+                            <img src="images/slideproduc.webp" class="img-fluid" alt="" style="height: 200px;">
+                            <div class="product">
+                                <p class="prod-name" style="font-size: 16px; font-weight: 450;">AIR FORCE 1</p>
+                                <p class="prod-price" style="font-size: 15px; font-weight: 700;">110 &</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               		</div>
+               			</div>
+
     </section>
     <hr class="container">
     <section class="myfooter py-4" style=" height: 400px; font-weight: 700;">
-        <div class="container-fluid text-center bg-dark text-light" style=" height: 400px;">
-            <div class="footer-info py-4" >
-                <h4 class="footer-title">Giới thiệu</h4>
-                <p>Liên hệ: (+84) 123 456 789 </p>
-                <p>Địa Chỉ: 100 Xô Viết Nghệ Tĩnh, Phường 21, Bình Thạnh, Thành phố Hồ Chí Minh, Vietnam</p>
-                <p>Đăng ký nhận tin: Đăng ký để nhận thông tin mới nhất và các ưu đãi đặc biệt!</p>
-                <p>Theo Dõi Chúng Tôi:</p>
-                <div class="list-social" style="font-size: 30px; ">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-google" aria-hidden="true"></i>
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </div>
-                <p>Chính Sách:</p>
-                <p style="font-size: 15px;">Chính Sách Bảo Mật | Điều Khoản Sử Dụng</p>
-                <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
-            </div>
-        </div>
     </section>
+    <jsp:include page="footer.jsp">
+<jsp:param value="footer" name="footer"/>
+</jsp:include>
 </body>
 </html>
