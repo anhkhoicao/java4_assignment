@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     
- 
+ <base href="/NiceKicks/">
 
 </head>
 <body>
@@ -69,7 +69,7 @@
                           <li><a class="dropdown-item" href="#">Sign In</a></li>
                           <li><a class="dropdown-item" href="#">Register</a></li>
                           <li><a class="dropdown-item" href="#">Wish List</a></li>
-                          <li><a class="dropdown-item" href="#">Cart</a></li>
+                          <li><a class="dropdown-item" href="user/cart" >Cart</a></li>
                         </ul>
                       </div>
                 </div>
@@ -98,7 +98,7 @@
             </a>
           </div>
           <div class="col-sm-1 mt-4" style="font-size: small;">
-            <a href="#" style="text-decoration: none;color: black;" formaction="cart"><i class="bi bi-bag"></i> Your Cart</a>
+            <a href="user/cart" style="text-decoration: none;color: black;" ><i class="bi bi-bag"></i> Your Cart</a>
           </div>
           <div class="col-sm-2 mt-2" style="font-size: medium;"></div>
         </div>

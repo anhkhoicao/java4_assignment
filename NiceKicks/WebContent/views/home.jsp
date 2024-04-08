@@ -31,10 +31,10 @@
                     <img src="images/nike-just-do-it.jpg" alt="Minton" class="d-block w-100">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/nike-just-do-it(1).png" style="height: 980px;" alt="Sun" class="d-block w-100">
+                    <img src="images/airmax.png" style="height: 980px;" alt="Sun" class="d-block w-100">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/nike-just-do-it.jpg" alt="Amarte" class="d-block w-100">
+                    <img src="images/nike_sb.png" alt="Amarte" class="d-block w-100">
                   </div>
                 </div>
               
