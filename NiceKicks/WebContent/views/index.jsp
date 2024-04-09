@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link rel="stylesheet" href="index.css">
-
+ <base href="/NiceKicks/">
 </head>
 <body>
     <section class="myheader" style=" background-color: #fff;" ng-include="'Include/header.html'"></section>

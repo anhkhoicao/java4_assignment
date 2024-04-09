@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <base href="/NiceKicks/">
 </head>
 <body>
 <jsp:include page="header.jsp">
@@ -16,9 +17,9 @@
 </jsp:include>
     <section class="mybody py-4">
         <div class="container" style="border: 1px solid palevioletred">
-            <div class="row text-light text-center" style="height: 700px; box-shadow: 0 10px 20px 0 rgba(58, 75, 205, .33);">
+            <div class="row text-light text-center" style="height: 800px; box-shadow: 0 10px 20px 0 rgba(58, 75, 205, .33);">
                 <div class="col-8">
-                    <img src="Picture/nike-just-do-it.png" style="width: 925px; height: 700px;" alt="">
+                    <img src="images/logo1 (2).png" style=" width: 850px; height: 700px; " alt="">
                 </div>
                 <div class="col-4 text-center" style="border-left: 1px solid palevioletred;">
                     <div class="header" style="height: 100px;">

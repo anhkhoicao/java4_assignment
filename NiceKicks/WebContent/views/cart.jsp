@@ -36,6 +36,7 @@
 
     }
 </style>
+ <base href="/NiceKicks/">
 </head>
 <body>
 <jsp:include page="header.jsp">
