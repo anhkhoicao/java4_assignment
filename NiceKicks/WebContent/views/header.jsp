@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,9 +123,8 @@
                   <li class="nav-item dropdown me-4" >
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Casual</a></li>
+                      <li><a class="dropdown-item" href="#">Lifestyle</a></li>
                       <li><a class="dropdown-item" href="#">Basketball</a></li>
-                      <li><a class="dropdown-item" href="#">Running</a></li>
                     </ul>
                   </li>
 

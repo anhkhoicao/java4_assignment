@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+  version="3.0">
+  <persistence-unit name="java_ASM_NiceKicks">
+    <class>entity.Cart</class>
+    <class>entity.Product</class>
+    <class>entity.ProductDetails</class>
+    <class>entity.Users</class>
+    <class>entity.NumberOfVisit</class>
+    <class>entity.FavoriteCount</class>
+    <class>entity.CartDetails</class>
+    <class>entity.Receipt</class>
+    <class>entity.ReceiptDetails</class>
+
+    <properties>
+      <property name="hibernate.connection.url"
+        value="jdbc:sqlserver://localhost:1433;DatabaseName=java4_ASM;encrypt=true;trustServerCertificate=true;"/>
+      <property name="hibernate.connection.driver_class"
+        value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="hibernate.connection.username" value="sa"/>
+      <property name="hibernate.connection.password" value="123"/>
+    </properties>
+  </persistence-unit>
+</persistence>
