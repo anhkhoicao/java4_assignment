@@ -1,6 +1,6 @@
-create database java4_ASM
+create database java4_assignment
 go
-use java4_ASM
+use java4_assignment
 go
 
 -- Create table Product
@@ -59,6 +59,7 @@ CREATE TABLE Cart (
     ProductID int  NOT NULL,
     ProductName NVARCHAR(50) NOT NULL,
     TotalPayment FLOAT NOT NULL,
+	IsDeleted BIT NOT NULL
     FOREIGN KEY (UserID) REFERENCES Users (UserID),
     FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
 );
@@ -74,6 +75,7 @@ CREATE TABLE CartDetails (
     Quantity INT NOT NULL,
     Size INT NOT NULL,
     Price FLOAT NOT NULL,
+    IsDeleted BIT NOT NULL
     FOREIGN KEY (CartID) REFERENCES Cart (CartID),
     FOREIGN KEY (ProductDetailID) REFERENCES ProductDetails (ProductDetailID)
 );
@@ -86,6 +88,7 @@ CREATE TABLE Receipt (
     Phone VARCHAR(20) NOT NULL,
     Address NVARCHAR(255) NOT NULL,
     TotalPayment FLOAT NOT NULL,
+    IsDeleted BIT NOT NULL
     FOREIGN KEY (UserID) REFERENCES Users (UserID),
     FOREIGN KEY (CartID) REFERENCES Cart (CartID)
 );
@@ -100,6 +103,7 @@ CREATE TABLE ReceiptDetails (
     Size INT NOT NULL,
     Color NVARCHAR(20) NOT NULL,
     Price FLOAT NOT NULL,
+    IsDeleted BIT NOT NULL
     FOREIGN KEY (ReceiptID) REFERENCES Receipt (ReceiptID),
     FOREIGN KEY (CartDetailID) REFERENCES CartDetails (CartDetailID)
 );
@@ -245,32 +249,32 @@ VALUES
 
 
 -- Insert rows into Cart table
-INSERT INTO Cart (UserID, ProductID, ProductName, TotalPayment)
+INSERT INTO Cart (UserID, ProductID, ProductName, TotalPayment, IsDeleted)
 VALUES
-    (1, 1, 'Nike Dunk', 240.0),
-    (2, 3, 'Nike Air Max 90', 130.0),
-    (3, 2, 'Nike Air Force 1', 330.0);
+    (1, 1, 'Nike Dunk', 240.0, 0),
+    (2, 3, 'Nike Air Max 90', 130.0, 0),
+    (3, 2, 'Nike Air Force 1', 330.0, 0);
 
 -- Insert rows into CartDetails table
-INSERT INTO CartDetails (CartID, ProductDetailID, ProductType, Colorway, ProductImage, Quantity, Size, Price)
+INSERT INTO CartDetails (CartID, ProductDetailID, ProductType, Colorway, ProductImage, Quantity, Size, Price , IsDeleted)
 VALUES
-    (1, 1, 'lifestyle', 'White/Green', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\dunk-low-retro-mens-shoes-26QgdP.png"', 2, 9, 120.0),
-    (2, 21, 'lifestyle', 'Navy/White', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\air-max-90-mens-shoes-Bd2qnn.png"', 1, 11, 130.0),
-    (3, 16, 'lifestyle', 'White', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\AF1.png"', 3, 10, 110.0);
+    (1, 1, 'lifestyle', 'White/Green', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\dunk-low-retro-mens-shoes-26QgdP.png"', 2, 9, 120.0, 0),
+    (2, 21, 'lifestyle', 'Navy/White', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\air-max-90-mens-shoes-Bd2qnn.png"', 1, 11, 130.0, 0),
+    (3, 16, 'lifestyle', 'White', '"C:\FPT_Polytechnic\.metadata\java4_assignment\java4_assignment\NiceKicks\WebContent\images\AF1.png"', 3, 10, 110.0, 0);
 
 -- Insert rows into Receipt table
-INSERT INTO Receipt (UserID, CartID, Date, Phone, Address, TotalPayment)
+INSERT INTO Receipt (UserID, CartID, Date, Phone, Address, TotalPayment , IsDeleted)
 VALUES
-    (1, 1, '2024-04-09', '+1 123-456-7890', '123 Main St, Anytown, USA', 240.0),
-    (2, 2, '2024-04-09', '1111111111', '789 Oak St, Chicago, IL', 130.0),
-    (3, 3, '2024-04-09', '2222222222', '321 Pine St, San Francisco, CA', 330.0);
+    (1, 1, '2024-04-09', '+1 123-456-7890', '123 Main St, Anytown, USA', 240.0, 0),
+    (2, 2, '2024-04-09', '1111111111', '789 Oak St, Chicago, IL', 130.0, 0),
+    (3, 3, '2024-04-09', '2222222222', '321 Pine St, San Francisco, CA', 330.0, 0);
 
 -- Insert rows into ReceiptDetails table
-INSERT INTO ReceiptDetails (ReceiptID, CartDetailID, ProductType, Quantity, Size, Color, Price)
+INSERT INTO ReceiptDetails (ReceiptID, CartDetailID, ProductType, Quantity, Size, Color, Price, IsDeleted)
 VALUES
-    (1, 1, 'lifestyle', 2, 9, 'White/Green', 120.0),
-    (2, 2, 'lifestyle', 1, 7, 'Navy/White', 130.0),
-    (3, 3, 'lifestyle', 3, 10, 'White', 110.0);
+    (1, 1, 'lifestyle', 2, 9, 'White/Green', 120.0, 0),
+    (2, 2, 'lifestyle', 1, 7, 'Navy/White', 130.0, 0),
+    (3, 3, 'lifestyle', 3, 10, 'White', 110.0, 0);
 
 -- Drop the Users table
 DROP TABLE IF EXISTS Users;
