@@ -45,7 +45,7 @@
                     <i class='bx bxs-user'></i>
                 </div>
             </div>
-            <!-- <label><input type="checkbox">Why?I don't Change my information</label> <br> -->
+            
             <button type="submit" class="btn" style="color: white;">Change</button>
         </form>
     </div>

@@ -20,7 +20,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Cart {
 private int cartId;
-private User userByUserId;
+private Users userByUserId;
 private Product productByProductId;
 private String productName;
 private double totalPayment;
@@ -72,11 +72,11 @@ public void setIsDeleted(Boolean isDeleted) {
 
 @ManyToOne
 @JoinColumn(name = "UserID", referencedColumnName = "UserID")
-public User getUserByUserId() {
+public Users getUserByUserId() {
 	return userByUserId;
 }
 
-public void setUserByUserId(User userByUserId) {
+public void setUserByUserId(Users userByUserId) {
 	this.userByUserId = userByUserId;
 }
 

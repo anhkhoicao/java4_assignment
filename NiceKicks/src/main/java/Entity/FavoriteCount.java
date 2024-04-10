@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class FavoriteCount {
 	private int favoriteID;
-	private User userByUserId;
+	private Users userByUserId;
 	private Product productByProductId;
 	
 	@Id
@@ -26,11 +26,11 @@ public class FavoriteCount {
 	}
 	@ManyToOne
 	@JoinColumn(name = "UserID", referencedColumnName = "UserID")
-	public User getUserByUserId() {
+	public Users getUserByUserId() {
 		return userByUserId;
 	}
 	
-	public void setUserByUserId(User userByUserId) {
+	public void setUserByUserId(Users userByUserId) {
 		this.userByUserId = userByUserId;
 	}
 
