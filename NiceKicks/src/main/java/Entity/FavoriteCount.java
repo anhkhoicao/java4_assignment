@@ -34,7 +34,7 @@ public class FavoriteCount {
 		this.userByUserId = userByUserId;
 	}
 
-	@ManyToMany
+	@ManyToOne
 	@JoinColumn(name = "ProductID", referencedColumnName = "ProductID")
 	public Product getProductByProductId() {
 		return productByProductId;
