@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
- <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <jsp:include page="header.jsp">
