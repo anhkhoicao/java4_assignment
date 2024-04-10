@@ -28,6 +28,8 @@ public class ProductDAO {
             updateProduct(product);
         }
     }
+    
+    
 
     public void updateProduct(Product product) {
         session.beginTransaction();

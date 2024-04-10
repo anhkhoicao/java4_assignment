@@ -28,6 +28,10 @@ public class UserDAO {
     public Users selectUserById(int userId) {
         return entityManager.find(Users.class, userId);
     }
+    
+    
+    
+    
 
     // Sort users by user role
     public List<Users> sortUsersByRole() {

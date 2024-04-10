@@ -25,6 +25,8 @@ public class CartDAO {
         entityManager.persist(cart);
         transaction.commit();
     }
+    
+    
 
     public Cart getCartById(int cartId) {
         return entityManager.find(Cart.class, cartId);

@@ -36,6 +36,10 @@ public class CartDetailsDAO {
         }
         transaction.commit();
     }
+    
+    
+    
+    
 
     public void updateCartDetailById(CartDetails cartDetail) {
         EntityTransaction transaction = entityManager.getTransaction();
