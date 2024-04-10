@@ -24,6 +24,9 @@ private User userByUserId;
 private Product productByProductId;
 private String productName;
 private double totalPayment;
+private Boolean isDeleted;
+
+
 
 
 @Id
@@ -56,6 +59,15 @@ public void setTotalPayment(double totalPayment) {
 	this.totalPayment = totalPayment;
 }
 
+@Basic
+@Column(name = "IsDeleted")
+public Boolean getIsDeleted() {
+	return isDeleted;
+}
+public void setIsDeleted(Boolean isDeleted) {
+	this.isDeleted = isDeleted;
+}
+
 
 
 @ManyToOne
@@ -63,6 +75,7 @@ public void setTotalPayment(double totalPayment) {
 public User getUserByUserId() {
 	return userByUserId;
 }
+
 public void setUserByUserId(User userByUserId) {
 	this.userByUserId = userByUserId;
 }
