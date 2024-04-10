@@ -28,5 +28,7 @@ public class CartDetails {
 	public void setCartDetailID(int cartDetailID) {
 		this.cartDetailID = cartDetailID;
 	}
+	
+	
 
 }
