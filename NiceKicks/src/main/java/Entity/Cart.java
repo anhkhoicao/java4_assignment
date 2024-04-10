@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 
@@ -66,7 +67,7 @@ public void setUserByUserId(User userByUserId) {
 	this.userByUserId = userByUserId;
 }
 
-@ManyToOne
+@ManyToMany
 @JoinColumn(name = "ProductID", referencedColumnName = "ProductID")
 public Product getProductByProductId() {
 	return productByProductId;
