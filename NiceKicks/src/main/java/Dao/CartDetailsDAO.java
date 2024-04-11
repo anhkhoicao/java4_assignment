@@ -15,7 +15,7 @@ public class CartDetailsDAO {
     private EntityManager entityManager;
 
     public CartDetailsDAO() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_assignment"); // Change the persistence unit name if necessary
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_ASM"); // Change the persistence unit name if necessary
         entityManager = entityManagerFactory.createEntityManager();
     }
 

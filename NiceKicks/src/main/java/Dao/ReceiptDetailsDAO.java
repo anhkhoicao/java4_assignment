@@ -13,7 +13,7 @@ public class ReceiptDetailsDAO {
     private EntityManager entityManager;
 
     public ReceiptDetailsDAO() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_assignment");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_ASM");
         entityManager = entityManagerFactory.createEntityManager();
     }
 

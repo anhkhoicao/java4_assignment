@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
   version="3.0">
-  <persistence-unit name="java4_assignment">
+  <persistence-unit name="java4_ASM">
     <class>entity.Cart</class>
     <class>entity.Product</class>
     <class>entity.ProductDetails</class>
@@ -16,7 +16,7 @@
 
     <properties>
       <property name="hibernate.connection.url"
-        value="jdbc:sqlserver://localhost:1433;DatabaseName=java4_assignment;encrypt=true;trustServerCertificate=true;"/>
+        value="jdbc:sqlserver://localhost:1433;DatabaseName=java4_ASM;encrypt=true;trustServerCertificate=true;"/>
       <property name="hibernate.connection.driver_class"
         value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
       <property name="hibernate.connection.username" value="sa"/>

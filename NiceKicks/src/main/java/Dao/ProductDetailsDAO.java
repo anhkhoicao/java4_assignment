@@ -13,7 +13,7 @@ public class ProductDetailsDAO {
     private EntityManager entityManager;
 
     public ProductDetailsDAO() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_assignment");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_ASM");
         entityManager = entityManagerFactory.createEntityManager();
     }
 

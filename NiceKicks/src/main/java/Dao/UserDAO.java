@@ -14,7 +14,7 @@ public class UserDAO {
     private EntityManager entityManager;
 
     public UserDAO() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_assignment");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_ASM");
         entityManager = entityManagerFactory.createEntityManager();
     }
 
