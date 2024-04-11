@@ -1,5 +1,6 @@
 package Dao;
 
+import Entity.ReceiptDetails;
 import Entity.Users;
 
 import javax.persistence.EntityManager;
@@ -66,6 +67,10 @@ public class UserDAO {
     // Show all users
     public List<Users> getAllUsers() {
         Query query = entityManager.createQuery("SELECT u FROM Users u");
+        return query.getResultList();
+    }
+    public List<Users> getAllActiveUsers() {
+        Query query = entityManager.createQuery("SELECT rd FROM Users rd WHERE rd.isDeleted = false");
         return query.getResultList();
     }
 

@@ -1,68 +1,67 @@
 package Dao;
 
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
 import Entity.ProductDetails;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
 
 public class ProductDetailsDAO {
 
-    private final Session session;
+    private EntityManager entityManager;
 
-    public ProductDetailsDAO(Session session) {
-        this.session = session;
+    public ProductDetailsDAO() {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("java4_assignment");
+        entityManager = entityManagerFactory.createEntityManager();
     }
 
     public void insertProductDetail(ProductDetails productDetails) {
-        session.beginTransaction();
-        session.save(productDetails);
-        session.getTransaction().commit();
+        entityManager.getTransaction().begin();
+        entityManager.persist(productDetails);
+        entityManager.getTransaction().commit();
     }
 
     public void deleteProductDetailById(int productDetailId) {
         ProductDetails productDetails = selectProductDetailById(productDetailId);
         if (productDetails != null) {
+            entityManager.getTransaction().begin();
             productDetails.setIsDeleted(true);
-            updateProductDetail(productDetails);
+            entityManager.getTransaction().commit();
         }
     }
-    
-    
-    
-    
 
     public void updateProductDetail(ProductDetails productDetails) {
-        session.beginTransaction();
-        session.update(productDetails);
-        session.getTransaction().commit();
+        entityManager.getTransaction().begin();
+        entityManager.merge(productDetails);
+        entityManager.getTransaction().commit();
     }
 
     public ProductDetails selectProductDetailById(int productDetailId) {
-        return session.get(ProductDetails.class, productDetailId);
+        return entityManager.find(ProductDetails.class, productDetailId);
     }
 
     public List<ProductDetails> findProductDetailsByKeyword(String keyword) {
-        Query<ProductDetails> query = session.createQuery(
-                "FROM ProductDetails WHERE isDeleted = false AND (productType LIKE :keyword OR colorway LIKE :keyword)", ProductDetails.class)
-                .setParameter("keyword", "%" + keyword + "%");
-        return query.list();
+        Query query = entityManager.createQuery(
+                "FROM ProductDetails WHERE isDeleted = false AND (productType LIKE :keyword OR colorway LIKE :keyword)");
+        query.setParameter("keyword", "%" + keyword + "%");
+        return query.getResultList();
     }
 
     public List<ProductDetails> getAllProductDetails() {
-        Query<ProductDetails> query = session.createQuery("FROM ProductDetails", ProductDetails.class);
-        return query.list();
+        Query query = entityManager.createQuery("SELECT pd FROM ProductDetails pd");
+        return query.getResultList();
     }
 
+
     public List<ProductDetails> getAllActiveProductDetails() {
-        Query<ProductDetails> query = session.createQuery("FROM ProductDetails WHERE isDeleted = false", ProductDetails.class);
-        return query.list();
+        Query query = entityManager.createQuery("FROM ProductDetails WHERE isDeleted = false");
+        return query.getResultList();
     }
 
     public List<ProductDetails> getAllProductDetailsSortedByPrice() {
-        Query<ProductDetails> query = session.createQuery("FROM ProductDetails WHERE isDeleted = false ORDER BY price", ProductDetails.class);
-        return query.list();
+        Query query = entityManager.createQuery("FROM ProductDetails WHERE isDeleted = false ORDER BY price");
+        return query.getResultList();
     }
 }
-
